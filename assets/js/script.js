@@ -1,16 +1,20 @@
+var pastSearchList = JSON.parse(localStorage.getItem("cityList")) || [];
+
+
 function pastSearches() {
     var pastSearch = document.querySelector("#search-input").value;
     console.log(pastSearch)
+    pastSearchList.push(pastSearch)
+    localStorage.setItem("cityList", JSON.stringify(pastSearchList));
 
-    localStorage.setItem("city", JSON.stringify(pastSearch));
+    var pastSearchesEl = document.querySelector(".past-searches-list");
+    pastSearchesEl.innerHTML = "";
 
     for (var i=0; i < pastSearch.length; i++) {
-        var pastSearch = JSON.parse(localStorage.getItem("city")) || [];
-
+        var pastSearch = JSON.parse(localStorage.getItem("cityList")) || [];
         var pastSearchesEl = document.querySelector(".past-searches-list");
-
         var pastSearchesLi = document.createElement("li")
-        pastSearchesLi.innerHTML = pastSearch;
+        pastSearchesLi.innerHTML = pastSearch[i];
         pastSearchesEl.appendChild(pastSearchesLi);
 
     };
