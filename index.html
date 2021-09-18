@@ -15,10 +15,12 @@
         <div class="row">
             <div class="search col">
                 <h3>Search for a City:</h3>
-                <input type="text" id="search"><br>
-                <button id="search-btn">Search</button>
+                <input type="text" id="search-input"><br>
+                <button onclick="search()" class="search-btn">Search</button>
                 <div class="past-searches row">
+                    <ul class="past-searches-list">
                     <!-- Pull from local storage -->
+                    </ul>
                 </div>
             </div>
             <div class="results col">
@@ -30,24 +32,26 @@
                     <h3>5-Day Forecast:</h3>
                 </div>
                 <div class="results-forecast row">
-                    <div class="forecast-day col">
+                    <div class="forecast-day col" id="forecast1">
                         <!-- Pull from API -->
                     </div>
-                    <div class="forecast-day col">
+                    <div class="forecast-day col" id="forecast2">
                         <!-- Pull from API -->
                     </div>
-                    <div class="forecast-day col">
+                    <div class="forecast-day col" id="forecast3">
                         <!-- Pull from API -->
                     </div>
-                    <div class="forecast-day col">
+                    <div class="forecast-day col" id="forecast4">
                         <!-- Pull from API -->
                     </div>
-                    <div class="forecast-day col">
+                    <div class="forecast-day col" id="forecast4">
                         <!-- Pull from API -->
                     </div>
                 </div>
             </div>
         </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
