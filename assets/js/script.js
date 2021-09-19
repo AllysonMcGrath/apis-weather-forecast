@@ -78,6 +78,10 @@ function search() {
             updatePastSearches();
             today(response, cityName);
         })
+
+        .catch(function() {
+            alert("Please enter a valid state name");
+        })
 };
 
 function today(response, cityName) {
