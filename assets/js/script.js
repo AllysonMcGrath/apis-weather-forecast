@@ -12,7 +12,7 @@ function displayPastSearches() {
         pastSearchesEl.appendChild(pastSearchesLi);
 
     };
-}
+};
 
 function updatePastSearches() {
     var pastSearchesEl = document.querySelector(".past-searches");
@@ -43,7 +43,7 @@ function forecast(response) {
         $(this).append(htmlDay);
         count++;
       });
-}
+};
 
 function search() {
 
@@ -88,19 +88,32 @@ function today(response, cityName) {
                     "<img class='icon' id='wicon' src='http://openweathermap.org/img/wn/" + response.current.weather[0].icon + "@2x.png' alt='Weather icon'>" +
                     "<p>Temp: " + response.current.temp + " F</p>" +
                     "<p>Wind: " + response.current.wind_speed + "mph</p>" +
-                    "<p>Humidity: " + response.current.humidity + "</p>";
+                    "<p>Humidity: " + response.current.humidity + "</p>" +
+                    "<p>UVI: <span id='uvi'>" + response.current.uvi + "<span> </p>";
     $(".today").append(htmlToday);
+
+
+     
+    if (response.current.uvi < 3) {
+        $("#uvi").attr("class", "green");
+    }
+    else if (response.current.uvi > 2 && response.current.uvi < 6) {
+        $("#uvi").attr("class", "yellow");  
+    }
+    else if (response.current.uvi > 5 && response.current.uvi < 11) {
+        $("#uvi").attr("class", "red");
+    }
+    else {
+        $("#uvi").attr("class", "purple");
+    }
               
-}
+};
 
 function clearContent() {
-    $(".forecast-day").each(function() {
-        console.log($(this));
-        $(this).innerHTML = "";
-      });
+    $(".forecast-day").empty();
     document.querySelector(".today").innerHTML = "";
     document.querySelector(".forecast-title").innerHTML = "";
-}
+};
 
 displayPastSearches();
 

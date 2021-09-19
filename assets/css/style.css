@@ -42,11 +42,6 @@ header {
     font-weight: bold;
 }
 
-.search {
-    /* margin: 5px;
-    padding: 5px; */
-}
-
 .date {
     font-weight: bold;
     font-size: 18px;
@@ -55,4 +50,27 @@ header {
 .icon {
     width: 50px;
     height: auto;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.purple {
+    background-color: pink;
+}
+
+#uvi {
+    display: inline;
+    border-radius: 8px;
+    color: white;
+    padding: 3px;
 }
