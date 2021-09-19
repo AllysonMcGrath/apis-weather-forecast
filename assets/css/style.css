@@ -1,1 +1,58 @@
+header {
+    background-color: rgb(5, 5, 146);
+    color: white;
+    text-align: center;
+}
 
+#search-input {
+    width: 90%;
+}
+.search-btn {
+    background-color: rgb(101, 189, 224);
+    color: white;
+    margin: 5px 0px;
+    width: 90%;
+    border-radius: 8px;
+}
+
+.past-searches {
+    border-top: black solid 1px;
+
+}
+.past-button {
+    background-color: rgb(167, 166, 166);
+    margin: 5px;
+    width: 90%;
+    border-radius: 8px;
+}
+
+.today {
+    border:black solid 1px;
+    margin: 5px;
+}
+.forecast-day {
+    background-color: rgb(41, 58, 78);
+    color: white;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.date-today {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search {
+    /* margin: 5px;
+    padding: 5px; */
+}
+
+.date {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.icon {
+    width: 50px;
+    height: auto;
+}
