@@ -30,7 +30,7 @@ function updatePastSearches() {
 
 function forecast(response) {
 
-    $(".forecast-title").append("<h3>5-Day Forecast</h3>");
+    $(".forecast-title").append("<h3>5-Day Forecast:</h3>");
     var count = 0;
 
     $(".forecast-day").each(function() {
@@ -82,7 +82,7 @@ function search() {
 
 function today(response, cityName) {
     var currentDay = moment().format("MM/DD/YY");
-    var htmlToday = "<p class='date-today'>"+ cityName + " (" + currentDay + ")</p>" + 
+    var htmlToday = "<h3 class='date-today'>"+ cityName + " (" + currentDay + ")</h3>" + 
                     "<img class='icon' id='wicon' src='http://openweathermap.org/img/wn/" + response.current.weather[0].icon + "@2x.png' alt='Weather icon'>" +
                     "<p>Temp: " + response.current.temp + " F</p>" +
                     "<p>Wind: " + response.current.wind_speed + "mph</p>" +
