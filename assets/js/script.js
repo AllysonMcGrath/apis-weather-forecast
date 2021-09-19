@@ -79,8 +79,8 @@ function search() {
             today(response, cityName);
         })
 
-        .catch(function() {
-            alert("Please enter a valid state name");
+        .catch(function(error) {
+            alert("An error occurred. Check the city name or refresh the page")
         })
 };
 
