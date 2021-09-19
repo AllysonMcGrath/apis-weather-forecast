@@ -73,7 +73,6 @@ function search() {
         })
 
         .then(function(response) {
-            console.log (response);
             clearContent();
             forecast(response);
             updatePastSearches();
@@ -83,12 +82,11 @@ function search() {
 
 function today(response, cityName) {
     var currentDay = moment().format("MM/DD/YY");
-    console.log(currentDay)
     var htmlToday = "<p class='date-today'>"+ cityName + " (" + currentDay + ")</p>" + 
                     "<img class='icon' id='wicon' src='http://openweathermap.org/img/wn/" + response.current.weather[0].icon + "@2x.png' alt='Weather icon'>" +
                     "<p>Temp: " + response.current.temp + " F</p>" +
                     "<p>Wind: " + response.current.wind_speed + "mph</p>" +
-                    "<p>Humidity: " + response.current.humidity + "</p>" +
+                    "<p>Humidity: " + response.current.humidity + "%</p>" +
                     "<p>UVI: <span id='uvi'>" + response.current.uvi + "<span> </p>";
     $(".today").append(htmlToday);
 
@@ -121,5 +119,4 @@ $(".past-searches").on("click", "button", function() {
     var pastSearch = $(this).attr("id");
     document.querySelector("#search-input").value = pastSearch;
     document.querySelector(".search-btn").click();
-    console.log(document.querySelector("#search-input"))
   });

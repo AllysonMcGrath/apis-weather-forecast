@@ -10,8 +10,9 @@ header {
 .search-btn {
     background-color: rgb(101, 189, 224);
     color: white;
-    margin: 5px 0px;
-    width: 90%;
+    margin: 5px;
+    margin-left: 0px;
+    width: 95%;
     border-radius: 8px;
 }
 
