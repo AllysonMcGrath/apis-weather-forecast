@@ -10,7 +10,7 @@ When a user types a city into the search box, the site fetches a response from t
 
 ## Installation
 
-You can find the deployed site [here.](https://allysonmcgrath.github.io/cbcchallenge6/)
+You can find the deployed site [here.](https://allysonmcgrath.github.io/apis-weather-forecast/)
 
 To install the entire project and access the code, you can clone the repository by using the command prompt
 
