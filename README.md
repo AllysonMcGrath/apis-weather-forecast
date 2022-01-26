@@ -14,7 +14,7 @@ You can find the deployed site [here.](https://allysonmcgrath.github.io/apis-wea
 
 To install the entire project and access the code, you can clone the repository by using the command prompt
 
-$ git clone https://github.com/AllysonMcGrath/cbcchallenge6.git
+$ git clone https://github.com/AllysonMcGrath/apis-weather-forecast.git
 
 Detailed instructions for cloning GitHub repositories can be found [here.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
